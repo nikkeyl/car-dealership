@@ -1,0 +1,111 @@
+//========================================================================================================================================================//
+.footer {
+    background-color: $color-1F1905;
+
+    &__container {
+        @include adaptive-value("padding-top", 40, 20);
+        @include adaptive-value("padding-bottom", 66, 20);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(20);
+        row-gap: rem(50);
+
+        @media (max-width: em(815)) {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        align-self: flex-start;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: rem(17);
+
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 64, 30);
+        }
+    }
+
+    &__text {
+        max-width: rem(235);
+        font-size: rem(18);
+        line-height: math.div(32, 18);
+    }
+
+    &__columns {
+        @include adaptive-value("gap", 48, 25);
+
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: em(815)) {
+            align-self: flex-start;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+
+        @media (max-width: em(815)) {
+            align-self: flex-start;
+        }
+    }
+
+    &__social {
+        img {
+            @include wh(rem(120), rem(60));
+        }
+    }
+
+    &__copy {
+        padding: rem(20) rem(15);
+        background-color: $color-EE8313;
+
+        p {
+            line-height: math.div(28, 16);
+            text-align: center;
+        }
+    }
+}
+
+.column-footer {
+    &__title {
+        font-family: $font-Manrope;
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: math.div(20, 18);
+
+        &:not(:last-child) {
+            margin-bottom: em(32, 18);
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: em(28, 16);
+        }
+    }
+
+    &__link {
+        padding: rem(20) 0;
+        line-height: math.div(20, 16);
+        white-space: nowrap;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-EE8313;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================//

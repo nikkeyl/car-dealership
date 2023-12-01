@@ -1,0 +1,17 @@
+.page {
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+.scaffold {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+
+    > .content {
+        flex: 1 1 auto;
+    }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.htm',{"title":"The World's Best Luxury Car Deals"})
+    <body class="page">
+        <div class="scaffold">
+            @@include('html/components/_header.htm',{})
+            <main class="content">
+                <section data-watch="navigator" data-watch-threshold="0.2" class="home">
+                    <div class="home__inner">
+                        <div class="home__container">
+                            <div data-watch class="home__body animation-rise">
+                                <h1 class="home__title title title--start"><span>The World's Best Luxury Car Deals</span></h1>
+                                <div class="home__text">
+                                    <p>HKinvestor can provide rentals of the most exclusive cars like Ferrari and Lamborghini.</p>
+                                </div>
+                                <div class="home__actions">
+                                    <a href="#" class="button">Buy Now</a>
+                                    <a href="#" class="button button--border">Video Introduction</a>
+                                </div>
+                                <div class="home__advantages">
+                                    <div class="home__advantage"><span>500+</span> Luxury Cars</div>
+                                    <div class="home__advantage"><span>#1</span> Best Deal Car</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home__image-ibg">
+                        <img src="@content/img/home/car.png" alt="car">
+                    </div>
+                </section>
+                <section data-watch="navigator" data-watch-threshold="0.2"  class="luxury-car">
+                    <div class="luxury-car__container">
+                        <h2 data-watch data-watch-threshold="0.4" class="luxury-car__title title animation-rise"><span>Rent</span> a <span>Luxury Car</span></h2>
+                        <div class="luxury-car__cards">
+                            <article data-watch data-watch-threshold="0.1" class="model-car luxury-car__model-car animation-rise">
+                                <a href="#" class="model-car__image-ibg">
+                                    <img data-src="@content/img/lux/supercar.jpg" alt="super car">
+                                </a>
+                                <a href="#" class="model-car__title"><h3>Supercars</h3></a>
+                                <a href="#" class="model-car__link">
+                                    Discover
+                                    <svg class="model-car__icon">
+                                        <use href="@content/icons/sprite.svg#svg-arrow"></use>
+                                    </svg>
+                                </a>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="model-car luxury-car__model-car animation-rise">
+                                <a href="#" class="model-car__image-ibg">
+                                    <img data-src="@content/img/lux/sportcar.jpg" alt="sport car">
+                                </a>
+                                <a href="#" class="model-car__title"><h3>Sportcars</h3></a>
+                                <a href="#" class="model-car__link">
+                                    Discover
+                                    <svg class="model-car__icon">
+                                        <use href="@content/icons/sprite.svg#svg-arrow"></use>
+                                    </svg>
+                                </a>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="model-car luxury-car__model-car animation-rise">
+                                <a href="#" class="model-car__image-ibg">
+                                    <img data-src="@content/img/lux/suv.jpg" alt="suv">
+                                </a>
+                                <a href="#" class="model-car__title"><h3>SUV</h3></a>
+                                <a href="#" class="model-car__link">
+                                    Discover
+                                    <svg class="model-car__icon">
+                                        <use href="@content/icons/sprite.svg#svg-arrow"></use>
+                                    </svg>
+                                </a>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="model-car luxury-car__model-car animation-rise">
+                                <a href="#" class="model-car__image-ibg">
+                                    <img data-src="@content/img/lux/supersuv.jpg" alt="super suv">
+                                </a>
+                                <a href="#" class="model-car__title"><h3>Supersuv</h3></a>
+                                <a href="#" class="model-car__link">
+                                    Discover
+                                    <svg class="model-car__icon">
+                                        <use href="@content/icons/sprite.svg#svg-arrow"></use>
+                                    </svg>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <section data-watch="navigator" data-watch-threshold="0.2" class="services">
+                    <div class="services__container">
+                        <h3 data-watch data-watch-threshold="0.4" class="services__title title animation-rise"><span>Our Other Services</span></h3>
+                        <div class="services__cards">
+                            <article data-watch data-watch-threshold="0.1" class="service-card services__service-card animation-rise">
+                                <a href="#" class="service-card__image-ibg">
+                                    <img data-src="@content/img/services/private.jpg" alt="car">
+                                </a>
+                                <div>
+                                    <a href="#" class="service-card__title hover-after"><h4>Private Charter</h4></a>
+                                    <div class="service-card__text">
+                                        <p>
+                                            Pinjam Mobil Rent also offers you discreet and speedy, transfers via helicopter or private planes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="service-card services__service-card animation-rise">
+                                <a href="#" class="service-card__image-ibg">
+                                    <img data-src="@content/img/services/Chauffer.jpg" alt="Chauffer">
+                                </a>
+                                <div>
+                                    <a href="#" class="service-card__title hover-after"><h4>Chauffer Driven Car Rentals</h4></a>
+                                    <div class="service-card__text">
+                                        <p>
+                                            Our chauffers are professional drivers who provide a discreet, reliable punctual and professional service.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="service-card services__service-card animation-rise">
+                                <a href="#" class="service-card__image-ibg">
+                                    <img data-src="@content/img/services/wedding.jpg" alt="wedding">
+                                </a>
+                                <div>
+                                    <a href="#" class="service-card__title hover-after"><h4>Wedding Car Rentals</h4></a>
+                                    <div class="service-card__text">
+                                        <p>
+                                            If you want to celebrate your wedding in style and elegance, choose one car from our luxury collection.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <section data-watch="navigator" data-watch-threshold="0.1" class="destinations">
+                    <div class="destinations__container">
+                        <h4 data-watch data-watch-threshold="0.4" class="destinations__title title animation-rise">Popular Destination for Car Rentals</h4>
+                        <div class="destinations__cards">
+                            <article data-watch data-watch-threshold="0.1" class="destination-card destinations__destination-card animation-rise">
+                                <a href="#" class="destination-card__image-ibg">
+                                    <img data-src="@content/img/destinations/london.jpg" alt="london">
+                                </a>
+                                <div class="destination-card__body">
+                                    <div class="destination-card__info">
+                                        <a href="#" class="destination-card__title"><h5>London</h5></a>
+                                        <div class="destination-card__sub-title">Car hire in 75 pick-up locations</div>
+                                        <div class="destination-card__price">
+                                            <svg class="destination-card__icon">
+                                                <use href="@content/icons/sprite.svg#svg-car"></use>
+                                            </svg>
+                                            From $ 669,00 per day
+                                        </div>
+                                    </div>
+                                    <a href="#" class="destination-card__rental-cars hover-after">Search rental cars in London</a>
+                                </div>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="destination-card destinations__destination-card animation-rise">
+                                <a href="#" class="destination-card__image-ibg">
+                                    <img data-src="@content/img/destinations/madrid.jpg" alt="madrid">
+                                </a>
+                                <div class="destination-card__body">
+                                    <div class="destination-card__info">
+                                        <a href="#" class="destination-card__title"><h5>Madrid</h5></a>
+                                        <div class="destination-card__sub-title">Car hire in 75 pick-up locations</div>
+                                        <div class="destination-card__price">
+                                            <svg class="destination-card__icon">
+                                                <use href="@content/icons/sprite.svg#svg-car"></use>
+                                            </svg>
+                                            From $ 799,00 per day
+                                        </div>
+                                    </div>
+                                    <a href="#" class="destination-card__rental-cars hover-after">Search rental cars in London</a>
+                                </div>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="destination-card destinations__destination-card animation-rise">
+                                <a href="#" class="destination-card__image-ibg">
+                                    <img data-src="@content/img/destinations/paris.jpg" alt="paris">
+                                </a>
+                                <div class="destination-card__body">
+                                    <div class="destination-card__info">
+                                        <a href="#" class="destination-card__title"><h5>Paris</h5></a>
+                                        <div class="destination-card__sub-title">Car hire in 75 pick-up locations</div>
+                                        <div class="destination-card__price">
+                                            <svg class="destination-card__icon">
+                                                <use href="@content/icons/sprite.svg#svg-car"></use>
+                                            </svg>
+                                            From $ 899,00 per day
+                                        </div>
+                                    </div>
+                                    <a href="#" class="destination-card__rental-cars hover-after">Search rental cars in London</a>
+                                </div>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="destination-card destinations__destination-card animation-rise">
+                                <a href="#" class="destination-card__image-ibg">
+                                    <img data-src="@content/img/destinations/dubai.jpg" alt="dubai">
+                                </a>
+                                <div class="destination-card__body">
+                                    <div class="destination-card__info">
+                                        <a href="#" class="destination-card__title"><h5>Dubai</h5></a>
+                                        <div class="destination-card__sub-title">Car hire in 75 pick-up locations</div>
+                                        <div class="destination-card__price">
+                                            <svg class="destination-card__icon">
+                                                <use href="@content/icons/sprite.svg#svg-car"></use>
+                                            </svg>
+                                            From $ 669,00 per day
+                                        </div>
+                                    </div>
+                                    <a href="#" class="destination-card__rental-cars hover-after">Search rental cars in London</a>
+                                </div>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="destination-card destinations__destination-card animation-rise">
+                                <a href="#" class="destination-card__image-ibg">
+                                    <img data-src="@content/img/destinations/roma.jpg" alt="roma">
+                                </a>
+                                <div class="destination-card__body">
+                                    <div class="destination-card__info">
+                                        <a href="#" class="destination-card__title"><h5>Roma</h5></a>
+                                        <div class="destination-card__sub-title">Car hire in 75 pick-up locations</div>
+                                        <div class="destination-card__price">
+                                            <svg class="destination-card__icon">
+                                                <use href="@content/icons/sprite.svg#svg-car"></use>
+                                            </svg>
+                                            From $ 799,00 per day
+                                        </div>
+                                    </div>
+                                    <a href="#" class="destination-card__rental-cars hover-after">Search rental cars in London</a>
+                                </div>
+                            </article>
+                            <article data-watch data-watch-threshold="0.1" class="destination-card destinations__destination-card animation-rise">
+                                <a href="#" class="destination-card__image-ibg">
+                                    <img data-src="@content/img/destinations/jakarta.jpg" alt="jakarta">
+                                </a>
+                                <div class="destination-card__body">
+                                    <div class="destination-card__info">
+                                        <a href="#" class="destination-card__title"><h5>Jakarta</h5></a>
+                                        <div class="destination-card__sub-title">Car hire in 75 pick-up locations</div>
+                                        <div class="destination-card__price">
+                                            <svg class="destination-card__icon">
+                                                <use href="@content/icons/sprite.svg#svg-car"></use>
+                                            </svg>
+                                            From $ 899,00 per day
+                                        </div>
+                                    </div>
+                                    <a href="#" class="destination-card__rental-cars hover-after">Search rental cars in London</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <section class="location">
+                    <div class="location__container">
+                        <h5 data-watch data-watch-threshold="0.4" class="location__title title animation-rise">Location</h5>
+                        <div data-watch data-watch-threshold="0.1" class="location__map animation-rise">
+                            <div data-watch data-watch-threshold="0.2" class="location__loader"></div>
+                            <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.13981822674!2d-3.8196228978351936!3d40.43786975681228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2z0JzQsNC00YDQuNC0LCDQmNGB0L_QsNC90LjRjw!5e0!3m2!1sru!2sru!4v1670507945123!5m2!1sru!2sru" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/components/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>

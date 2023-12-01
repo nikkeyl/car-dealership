@@ -1,0 +1,111 @@
+@mixin adaptive-value($property, $start-size, $min-size, $width-from: $container-width, $width-to: $min-width, $keep-size: 0) {
+    @if $start-size == 0 {
+        $start-size: 0.000001;
+    }
+    @if $min-size == 0 {
+        $min-size: 0.000001;
+    }
+    $add-size: math.div($start-size - $min-size, 16);
+    @if $width-from == $container-width and $max-width-container == 0 {
+        $width-from: $max-width;
+    }
+    $width-from-media: em($width-from);
+    $width-to-media: em($width-to);
+    $slope: math.div(($start-size - $min-size), ($width-from - $width-to));
+    $y-intersection: - $width-to * $slope + $min-size;
+    @if $y-intersection == 0 {
+        $y-intersection: 0.000001;
+    }
+    $fly-value: #{rem($y-intersection)}" + " #{$slope * 100}vw;
+    $property-value: #{"clamp(" rem($min-size) "," $fly-value "," rem($start-size) ")"};
+    @if $min-size > $start-size {
+        $property-value: #{"clamp(" rem($start-size) "," $fly-value "," rem($min-size) ")"};
+    }
+    @supports (#{$property}: $property-value) {
+        #{$property}: $property-value;
+    }
+    @supports not (#{$property}: $property-value) {
+        #{$property}: calc(#{rem($min-size)} + #{$add-size} * (100vw - #{rem($width-to)}) / #{math.div($width-from, 16) - math.div($width-to, 16)});
+    }
+    @if $width-from != $container-width and $width-from != $max-width and $keep-size != 1 and $keep-size != 2 {
+        @media (min-width: $width-from-media) {
+            #{$property}: inherit;
+        }
+    }
+    @if $width-to != $min-width and $keep-size != 1 and $keep-size != 3 {
+        @media (max-width: $width-to-media) {
+            #{$property}: inherit;
+        }
+    }
+}
+
+@mixin triangle($color, $direction, $top: rem(10), $right: rem(10), $bottom: rem(10), $left: rem(10), $position: absolute) {
+    width: 0;
+    height: 0;
+    position: $position;
+
+    @if $direction == down {
+        margin-top: 0 - round(calc($top / 2.5));
+        border-top: $top solid $color;
+        border-right: $right solid transparent;
+        border-left: $left solid transparent;
+    } @else if $direction == up {
+        margin-bottom: 0 - round(calc($bottom / 2.5));
+        border-right: $right solid transparent;
+        border-bottom: $bottom solid $color;
+        border-left: $left solid transparent;
+    } @else if $direction == right {
+        margin-right: - $right;
+        border-top: $top solid transparent;
+        border-bottom: $bottom solid transparent;
+        border-left: $left solid $color;
+    } @else {
+        margin-left: - $left;
+        border-top: $top solid transparent;
+        border-right: $right solid $color;
+        border-bottom: $bottom solid transparent;
+    }
+}
+
+@mixin responsive-output($breakpoint: $mobile, $inner-width: 4, $image-width: 6, $padding-bottom) {
+    &_inner {
+        flex: 0 0 100%;
+
+        @media (min-width: em($breakpoint)) {
+            width: #{$inner-width}0 + '%';
+        }
+    }
+    &__body {
+        @media (min-width: em($breakpoint)) {
+            width: #{$inner-width}0 + '%';
+        }
+    }
+    &__image-ibg {
+        @media (min-width: em($breakpoint)) {
+            flex: 0 0 calc(((100vw - #{rem($container-padding)}) * 0.#{$image-width}) + #{math.div($container-padding, 2)});
+            transform: translate(-100%, 0);
+            padding-bottom: percent($padding-bottom, $max-width);
+        }
+
+        @media (min-width: em($max-width-container)) {
+            flex: 0 0 calc(50vw - (0.#{$inner-width} - 0.#{$image-width}) * #{rem($max-width-container)});
+        }
+    }
+}
+
+@mixin grid-cards($type: fit, $min: rem(75), $max: 1fr, $gap: rem(30)) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+}
+
+@mixin pseudo($content, $position, $display) {
+    content: $content;
+    position: $position;
+    display: $display;
+}
+
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}

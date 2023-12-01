@@ -1,0 +1,5 @@
+@if $import-sticky == 1 {
+    [data-sticky] {
+        position: relative;
+    }
+}

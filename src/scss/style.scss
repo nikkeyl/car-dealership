@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@import "settings/functions";
+@import "settings/mixins";
+@import "settings/fonts/gfonts";
+@import "settings/variables";
+@import "settings/null";
+@import "settings/scaffold";
+@import "settings/container";
+@import "components/common";
+@import "modules/ibg";
+@import "components/forms/forms";
+@import "components/header";
+@import "components/footer";
+@import "components/pages/home/home";

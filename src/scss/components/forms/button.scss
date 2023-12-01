@@ -1,0 +1,59 @@
+@if $import-forms-button == 1 {
+    .button {
+        @include adaptive-value("padding-right", 24, 12);
+        @include adaptive-value("padding-left", 24, 12);
+        @include adaptive-value("font-size", 16, 14);
+
+        display: inline-flex;
+        justify-content: center;
+        padding-top: rem(12);
+        padding-bottom: rem(12);
+        line-height: math.div(20, 16);
+        letter-spacing: 0.01em;
+        text-align: center;
+        text-transform: capitalize;
+        color: $color-FFFFFF;
+        background-color: $color-EE8313;
+        transition: all 0.3s ease;
+
+        &--border {
+            position: relative;
+            border: rem(1) solid $color-EE8313;
+            color: $color-EE8313;
+            background-color: transparent;
+
+            &::before {
+                @include pseudo("", absolute, block);
+
+                left: 0;
+                top: 0;
+                z-index: -1;
+                width: 100%;
+                height: 0;
+                color: $color-FFFFFF;
+                background: $color-EE8313;
+                transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $color-FFFFFF;
+                    background-color: transparent;
+
+                    &::before {
+                        top: auto;
+                        bottom: 0%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-000000;
+                background-color: $color-FFFFFF;
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+//HEADER========================================================================================================================================================//
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    padding: rem(10) 0;
+    width: 100%;
+    background-color: $color-000000;
+
+    &__container {
+        @include adaptive-value("min-height", 108, 50);
+
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        transition: all 0.3s ease;
+
+        .header-scroll & {
+            @include adaptive-value("min-height", 60, 50);
+        }
+    }
+
+    &__logo {
+        flex: 1;
+    }
+
+    &__menu {
+        &:not(:last-child) {
+            @include adaptive-value("margin-right", 52, 10, 1440, 768, 1);
+        }
+    }
+}
+
+.logo {
+    img {
+        @include wh(rem(48), rem(48));
+    }
+}
+
+.actions {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(15);
+
+    &__icon {
+        flex: 0 0 rem(30);
+    }
+}
+
+//MENU========================================================================================================================================================//
+.menu {
+    &__body {
+        @media (max-width: $mobile) {
+            @include wh(rem(200), 100%);
+
+            position: fixed;
+            right: -100%;
+            top: 0;
+            bottom: 0;
+            z-index: 4;
+            overflow: auto;
+
+            // margin: auto 0;
+            padding: rem(90) rem(10);
+            background-color: $color-000000;
+            transition: all 0.3s ease;
+
+            &::before {
+                content: "";
+                position: fixed;
+                right: -100%;
+                top: 0;
+                z-index: 4;
+                width: rem(200);
+                height: rem(70);
+                background-color: $color-000000;
+            }
+
+            .menu-open & {
+                right: 0;
+
+                &::before {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    &__link {
+        $font-size: 16;
+
+        position: relative;
+        padding: rem(5) 0;
+        font-weight: 600;
+        line-height: math.div(19, $font-size);
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+
+        @media (max-width: $mobile) {
+            $font-size: 25;
+
+            font-size: rem($font-size);
+            color: $color-FFFFFF;
+
+            .menu-open & {
+                padding: 0;
+            }
+        }
+    }
+
+    &__list {
+        @include adaptive-value("column-gap", 48, 25);
+
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: rem(10);
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(20);
+            text-align: center;
+        }
+    }
+}
+
+//BURGER========================================================================================================================================================//
+.icon-menu {
+    display: none;
+
+    @media (max-width: $mobile) {
+        position: relative;
+        z-index: 5;
+        display: block;
+        width: rem(30);
+        height: rem(18);
+        cursor: pointer;
+
+        span,
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: rem(2);
+            background-color: $color-EE8313;
+            transition: all 0.3s ease;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            top: calc(50% - rem(1));
+        }
+
+        .menu-open & {
+            &::before {
+                top: calc(50% - rem(1));
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                bottom: calc(50% - rem(1));
+                transform: rotate(45deg);
+            }
+
+            span {
+                width: 0;
+            }
+        }
+    }
+}

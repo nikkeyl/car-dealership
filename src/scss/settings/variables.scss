@@ -1,0 +1,62 @@
+$max-width-container    : 1200;
+$container-padding      : 30;
+//=================================//
+$max-width              : 1440;
+$min-width              : 320;
+//=================================//
+$container-width        : $max-width-container + $container-padding;
+$pc                     : em($container-width);
+$tablet                 : em(992);
+$mobile                 : em(768);
+$mobile-small           : em(480);
+//=================================//
+$import-templates       : 0;
+
+$import-colorscheme     : 0;
+$import-fullscreen      : 0;
+$import-sticky          : 0;
+
+$import-ripple          : 0;
+$import-glitch          : 0;
+
+$import-change-style    : 0;
+$import-change-font     : 0;
+$import-progressbar     : 0;
+$import-breadcrumbs     : 0;
+$import-pagination      : 0;
+$import-preloader       : 0;
+$import-spollers        : 0;
+$import-showmore        : 0;
+$import-marquee         : 0;
+$import-popup           : 0;
+$import-forms           : 1;
+$import-tabs            : 0;
+$import-map             : 0;
+
+$import-forms-checkbox  : 0;
+$import-forms-quantity  : 0;
+$import-forms-select    : 0;
+$import-forms-rating    : 0;
+$import-forms-button    : 1;
+$import-forms-input     : 0;
+$import-forms-radio     : 0;
+$import-forms-range     : 0;
+//=================================//
+$a-focus-active-outline : 0;
+$main-background-color  :#000;
+$focus-active-outline   : 0;
+$main-font-family       : 'Be Vietnam Pro';
+$main-font-weight       : 400;
+$main-font-color        :#fff;
+$main-font-size         : rem(16);
+$font-Manrope           : 'Manrope';
+//=================================//
+$color-000000           :#000;
+$color-FFFFFF           :#fff;
+
+$color-EE8313           :#E81;
+$color-131313           :#131313;
+$color-171717           :#171717;
+$color-FFCC2C           :#FC2;
+$color-6D3B27           :#632;
+$color-1F1905           :#110;
